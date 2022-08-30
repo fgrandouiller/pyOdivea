@@ -45,6 +45,8 @@ class SuezClient():
 
         if self._provider == "Eau Olivet":
             BASE_URI = 'https://www.eau-olivet.fr'
+        if self._provider == "Odivea":
+            BASE_URI = 'https://www.odivea.fr'
         url = BASE_URI+API_ENDPOINT_LOGIN
 
         response = requests.get(url, headers=headers, timeout=self._timeout)
